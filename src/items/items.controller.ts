@@ -12,6 +12,8 @@ import { ItemsService } from './items.service';
 import { Items } from '../items';
 import { Item } from '../item';
 import { AuthGuard } from '@nestjs/passport';
+import { Permissions } from '../permissions.decorator';
+import { PermissionsGuard } from '../permissions.guard';
 
 @Controller('items')
 export class ItemsController {
@@ -27,20 +29,23 @@ export class ItemsController {
     return this.itemsService.find(id);
   }
 
-  @UseGuards(AuthGuard('jwt'))
+  @UseGuards(AuthGuard('jwt'), PermissionsGuard)
   @Post()
+  @Permissions('create:items')
   create(@Body('item') item: Item) {
     this.itemsService.create(item);
   }
 
-  @UseGuards(AuthGuard('jwt'))
+  @UseGuards(AuthGuard('jwt'), PermissionsGuard)
   @Put()
+  @Permissions('update:items')
   update(@Body('item') item: Item) {
     this.itemsService.update(item);
   }
 
-  @UseGuards(AuthGuard('jwt'))
+  @UseGuards(AuthGuard('jwt'), PermissionsGuard)
   @Delete(':id')
+  @Permissions('delete:items')
   delete(@Param('id') id: number) {
     this.itemsService.delete(id);
   }
