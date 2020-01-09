@@ -1,6 +1,6 @@
 # Developing a Secure API with NestJS
 
-[Click here to read the full tutorial](https://auth0.com/blog/developing-a-secure-api-with-nestjs-adding-authentication/)
+[Click here to read the full tutorial](https://auth0.com/blog/developing-a-secure-api-with-nestjs-adding-authorization/)
 
 Learn how to **build a feature-complete API using NestJS** that lets clients perform data operations on resources that describe a restaurant menu. Using TypeScript with Node.js gives you access to optional static type-checking along with robust tooling for large apps and the latest ECMAScript features.
 
@@ -57,7 +57,7 @@ AUTH0_AUDIENCE="Your Auth0 audience"
 npm run start:dev
 ```
 
-[Read on the complete tutorial](https://auth0.com/blog/developing-a-secure-api-with-nestjs-adding-authentication/)
+[Read on the complete tutorial](https://auth0.com/blog/developing-a-secure-api-with-nestjs-adding-authorization/)
 
 **If you have any questions or feedback, please [contact us through our Community Site for this tutorial](https://community.auth0.com/t/developing-a-secure-api-with-nestjs/33026).**
 
