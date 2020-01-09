@@ -1,75 +1,68 @@
-<p align="center">
-  <a href="http://nestjs.com/" target="blank"><img src="https://nestjs.com/img/logo_text.svg" width="320" alt="Nest Logo" /></a>
-</p>
+# Developing a Secure API with NestJS
 
-[travis-image]: https://api.travis-ci.org/nestjs/nest.svg?branch=master
-[travis-url]: https://travis-ci.org/nestjs/nest
-[linux-image]: https://img.shields.io/travis/nestjs/nest/master.svg?label=linux
-[linux-url]: https://travis-ci.org/nestjs/nest
-  
-  <p align="center">A progressive <a href="http://nodejs.org" target="blank">Node.js</a> framework for building efficient and scalable server-side applications, heavily inspired by <a href="https://angular.io" target="blank">Angular</a>.</p>
-    <p align="center">
-<a href="https://www.npmjs.com/~nestjscore"><img src="https://img.shields.io/npm/v/@nestjs/core.svg" alt="NPM Version" /></a>
-<a href="https://www.npmjs.com/~nestjscore"><img src="https://img.shields.io/npm/l/@nestjs/core.svg" alt="Package License" /></a>
-<a href="https://www.npmjs.com/~nestjscore"><img src="https://img.shields.io/npm/dm/@nestjs/core.svg" alt="NPM Downloads" /></a>
-<a href="https://travis-ci.org/nestjs/nest"><img src="https://api.travis-ci.org/nestjs/nest.svg?branch=master" alt="Travis" /></a>
-<a href="https://travis-ci.org/nestjs/nest"><img src="https://img.shields.io/travis/nestjs/nest/master.svg?label=linux" alt="Linux" /></a>
-<a href="https://coveralls.io/github/nestjs/nest?branch=master"><img src="https://coveralls.io/repos/github/nestjs/nest/badge.svg?branch=master#5" alt="Coverage" /></a>
-<a href="https://gitter.im/nestjs/nestjs?utm_source=badge&utm_medium=badge&utm_campaign=pr-badge&utm_content=body_badge"><img src="https://badges.gitter.im/nestjs/nestjs.svg" alt="Gitter" /></a>
-<a href="https://opencollective.com/nest#backer"><img src="https://opencollective.com/nest/backers/badge.svg" alt="Backers on Open Collective" /></a>
-<a href="https://opencollective.com/nest#sponsor"><img src="https://opencollective.com/nest/sponsors/badge.svg" alt="Sponsors on Open Collective" /></a>
-  <a href="https://paypal.me/kamilmysliwiec"><img src="https://img.shields.io/badge/Donate-PayPal-dc3d53.svg"/></a>
-  <a href="https://twitter.com/nestframework"><img src="https://img.shields.io/twitter/follow/nestframework.svg?style=social&label=Follow"></a>
-</p>
-  <!--[![Backers on Open Collective](https://opencollective.com/nest/backers/badge.svg)](https://opencollective.com/nest#backer)
-  [![Sponsors on Open Collective](https://opencollective.com/nest/sponsors/badge.svg)](https://opencollective.com/nest#sponsor)-->
+[Click here to read the full tutorial](https://auth0.com/blog/developing-a-secure-api-with-nestjs-adding-authentication/)
 
-## Description
+Learn how to **build a feature-complete API using NestJS** that lets clients perform data operations on resources that describe a restaurant menu. Using TypeScript with Node.js gives you access to optional static type-checking along with robust tooling for large apps and the latest ECMAScript features.
 
-[Nest](https://github.com/nestjs/nest) framework TypeScript starter repository.
+Learn also how to **define data models, create a data service, and quickly build modular endpoints**. As an option, you can also learn how to **secure the API using Auth0**. To see your API in action, you’ll use a production client called "WHATABYTE Dashboard", which is inspired by the [sleek web player from Spotify](https://open.spotify.com/search).
 
-## Installation
+![WHATBYTE Dashboard menu item](https://cdn.auth0.com/blog/developing-a-secure-api-with-nestjs/whatabyte-dashboard-menu-item.png)
+
+## Setup
+
+- Clone repository:
 
 ```bash
-$ npm install
+git clone git@github.com:auth0-blog/wab-menu-api-nestjs.git \
+nest-restaurant-api \
 ```
 
-## Running the app
+- Make the project folder your current directory:
 
 ```bash
-# development
-$ npm run start
-
-# watch mode
-$ npm run start:dev
-
-# production mode
-$ npm run start:prod
+cd nest-restaurant-api
 ```
 
-## Test
+- Install the project dependencies:
 
 ```bash
-# unit tests
-$ npm run test
-
-# e2e tests
-$ npm run test:e2e
-
-# test coverage
-$ npm run test:cov
+npm i
 ```
 
-## Support
+- If you haven't set up any Auth0 applications, follow the steps from these tutorial sections to create them:
 
-Nest is an MIT-licensed open source project. It can grow thanks to the sponsors and support by the amazing backers. If you'd like to join them, please [read more here](https://docs.nestjs.com/support).
+<a href="https://auth0.com/blog/developing-a-secure-api-with-nestjs-adding-authorization/#Set-Up-API-Authorization">Set Up API Authorization</a>
 
-## Stay in touch
+<a href="https://auth0.com/blog/developing-a-secure-api-with-nestjs-adding-authorization/#Register-a-Client-Application-with-Auth0">Register a Client Application with Auth0</a>
 
-- Author - [Kamil Myśliwiec](https://kamilmysliwiec.com)
-- Website - [https://nestjs.com](https://nestjs.com/)
-- Twitter - [@nestframework](https://twitter.com/nestframework)
+<a href="https://auth0.com/blog/developing-a-secure-api-with-nestjs-adding-authorization/#Connect-a-Client-Application-With-Auth0">Connect a Client Application With Auth0</a>
 
-## License
+- Create a `.env` hidden file:
 
-  Nest is [MIT licensed](LICENSE).
+```bash
+touch .env
+```
+
+- Populate `.env` with this:
+
+```bash
+PORT=7000
+AUTH0_DOMAIN="Your Auth0 domain"
+AUTH0_AUDIENCE="Your Auth0 audience"
+```
+
+- Start the Express server:
+
+```bash
+npm run start:dev
+```
+
+[Read on the complete tutorial](https://auth0.com/blog/developing-a-secure-api-with-nestjs-adding-authentication/)
+
+**If you have any questions or feedback, please [contact us through our Community Site for this tutorial](https://community.auth0.com/t/developing-a-secure-api-with-nestjs/33026).**
+
+## About Auth0
+
+Auth0, the identity platform for application builders, provides thousands of enterprise customers with a Universal Identity Platform for their web, mobile, IoT, and internal applications. Its extensible platform seamlessly authenticates and secures more than 2.5B logins per month, making it loved by developers and trusted by global enterprises. The company's U.S. headquarters in Bellevue, WA, and additional offices in Buenos Aires, London, Tokyo, Sydney, and Singapore, support its customers that are located in 70+ countries.
+
+For more information, visit [https://auth0.com](https://auth0.com/) or follow [@auth0 on Twitter](https://twitter.com/auth0).
